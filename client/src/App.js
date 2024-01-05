@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/testing">
+          <Route path="/">
             <h1>Test - Hello Jamo</h1>
           </Route>
         </Switch>
