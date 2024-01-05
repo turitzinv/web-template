@@ -15,12 +15,18 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/">
-            <h1>Test - Hello Jamo</h1>
+            <h1>Sample Title</h1>
+            {/* Featured items randomized? Like picks three? */}
           </Route>
         </Switch>
       </div>
     </BrowserRouter>
   );
 }
+
+//To Do:
+//navigation bar: Home (component), Inventory (component), About (component)?
+//Inventory Tab that is all cards. Title, price, click to see details
+//log in needed?
 
 export default App;
