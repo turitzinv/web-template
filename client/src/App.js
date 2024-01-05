@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Home from "./components/Home";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,9 +16,8 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/">
-            <h1>Sample Title</h1>
-            {/* Featured items randomized? Like picks three? */}
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
@@ -27,7 +27,7 @@ function App() {
 
 //To Do:
 //navigation bar: Home (component), Inventory (component), About (component)?
-//make Home component first
+//finish Home component first
 //Inventory Tab that is all cards. Title, price, click to see details
 //log in needed?
 
