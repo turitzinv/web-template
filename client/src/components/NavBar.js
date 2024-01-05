@@ -1,15 +1,13 @@
-import React from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import React from "react";
+import { NavLink, useHistory } from "react-router-dom";
 
 const NavBar = () => {
-
-
-  
   return (
     <div>
-      <h3>NavBar</h3>
-      </div>
-  )
-}
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/inventory">Inventory</NavLink>
+    </div>
+  );
+};
 
-export default NavBar
+export default NavBar;

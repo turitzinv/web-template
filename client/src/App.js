@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,8 +26,8 @@ function App() {
 }
 
 //To Do:
-//fix react-router-dom on line 2 (check hold project solution)
 //navigation bar: Home (component), Inventory (component), About (component)?
+//make Home component first
 //Inventory Tab that is all cards. Title, price, click to see details
 //log in needed?
 
