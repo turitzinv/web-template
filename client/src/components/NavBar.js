@@ -4,8 +4,8 @@ import { NavLink, useHistory } from "react-router-dom";
 const NavBar = () => {
   return (
     <div id="nav-bar">
-      <NavLink className="nav-link" to="/">Home</NavLink>
-      <NavLink className="nav-link" to="/inventory">Inventory</NavLink>
+      <NavLink id="navlink-home" to="/">Home</NavLink>
+      <NavLink id="navlink-inventory" to="/inventory">Inventory</NavLink>
     </div>
   );
 };
