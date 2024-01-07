@@ -5,13 +5,7 @@ import Home from "./components/Home";
 import Inventory from "./components/Inventory";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  // useEffect(() => {
-  //   fetch("/hello")
-  //     .then((r) => r.json())
-  //     .then((data) => setCount(data.count));
-  // }, []);
+  // const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
@@ -32,8 +26,6 @@ function App() {
 
 //To Do:
 //navigation bar: Home (component), Inventory (component), About (component)?
-//finish Home component first
-//Inventory Tab that is all cards. Title, price, click to see details
 //log in needed?
 
 export default App;

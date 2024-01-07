@@ -8,4 +8,8 @@ const Inventory = () => {
   );
 };
 
+//search bar
+//card previews, need SEEDED data to work with
+//Inventory Tab that is all cards. Name, price, click to see details
+
 export default Inventory;
