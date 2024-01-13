@@ -7,16 +7,25 @@ import ItemCard from "./components/ItemCard";
 
 function App() {
   const [items, setItems] = useState([]);
-  console.log(items)
+  
 
   useEffect(() => {
     fetch("/items")
       .then((resp) => resp.json())
       .then((items) => setItems(items));
+
+      // const fullItemsList = Object.values(items).map((item) => (
+      //   <ItemCard
+      //     key={item.id}
+      //     image={item.image_url}
+      //     name={item.name}
+      //     price={item.price}
+      //     description={item.description}
+      //   />
+      // ))
   }, []);
 
-  // console.log(items[0].id, "items.id")
-  // console.log(items[0].name)
+  console.log(typeof items)
 
   const fullItemList = Object.values(items).map((item) => {
     <ItemCard 
@@ -39,7 +48,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/inventory">
-            <Inventory fullItemList={fullItemList} />
+            {/* <Inventory fullItemList={fullItemList} /> */}
           </Route>
         </Switch>
       </div>
