@@ -15,7 +15,8 @@ function App() {
       .then((items) => setItems(items));
   }, []);
 
-  // console.log(items, "this is items")
+  // console.log(items[0].id, "items.id")
+  // console.log(items[0].name)
 
   const fullItemList = Object.values(items).map((item) => {
     <ItemCard 
@@ -27,7 +28,7 @@ function App() {
     /> 
   })
 
-  console.log(fullItemList, "this is fullItemList")
+  // console.log(fullItemList, "this is fullItemList")
 
   return (
     <BrowserRouter>
