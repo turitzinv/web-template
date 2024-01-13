@@ -3,9 +3,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Inventory from "./components/Inventory";
+import ItemCard from "./components/ItemCard";
 
 function App() {
-  const [items, setItems] = useState(0);
+  const [items, setItems] = useState([]);
   console.log(items)
 
   useEffect(() => {
@@ -13,6 +14,20 @@ function App() {
       .then((resp) => resp.json())
       .then((items) => setItems(items));
   }, []);
+
+  // console.log(items, "this is items")
+
+  const fullItemList = Object.values(items).map((item) => {
+    <ItemCard 
+    key={item.id}
+    image={item.image_url}
+    name={item.name}
+    price={item.price}
+    description={item.description}
+    /> 
+  })
+
+  console.log(fullItemList, "this is fullItemList")
 
   return (
     <BrowserRouter>
@@ -23,7 +38,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/inventory">
-            <Inventory />
+            <Inventory fullItemList={fullItemList} />
           </Route>
         </Switch>
       </div>

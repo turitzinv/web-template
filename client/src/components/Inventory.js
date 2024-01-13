@@ -1,13 +1,10 @@
 import React from "react";
 
-const Inventory = () => {
+const Inventory = ({ fullItemList }) => {
   return (
     <div>
-
-      
-
-
       <h1 id="inventory-title">Inventory</h1>
+      {fullItemList}
     </div>
   );
 };
