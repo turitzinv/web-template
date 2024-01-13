@@ -5,7 +5,14 @@ import Home from "./components/Home";
 import Inventory from "./components/Inventory";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [items, setItems] = useState(0);
+  console.log(items)
+
+  useEffect(() => {
+    fetch("/items")
+      .then((resp) => resp.json())
+      .then((items) => setItems(items));
+  }, []);
 
   return (
     <BrowserRouter>
@@ -15,7 +22,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path ="/inventory">
+          <Route path="/inventory">
             <Inventory />
           </Route>
         </Switch>
