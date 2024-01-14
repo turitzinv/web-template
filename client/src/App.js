@@ -13,31 +13,21 @@ function App() {
     fetch("/items")
       .then((resp) => resp.json())
       .then((items) => setItems(items));
-
-      // const fullItemsList = Object.values(items).map((item) => (
-      //   <ItemCard
-      //     key={item.id}
-      //     image={item.image_url}
-      //     name={item.name}
-      //     price={item.price}
-      //     description={item.description}
-      //   />
-      // ))
   }, []);
 
-  console.log(typeof items)
+  const fullItemList = items.length > 0 ? (
+    Object.values(items).map((item) => (
+      <ItemCard
+        key={item.id}
+        image={item.image_url}
+        name={item.name}
+        price={item.price}
+        description={item.description}
+      />
+    ))
+  ) : null;
 
-  const fullItemList = Object.values(items).map((item) => {
-    <ItemCard 
-    key={item.id}
-    image={item.image_url}
-    name={item.name}
-    price={item.price}
-    description={item.description}
-    /> 
-  })
-
-  // console.log(fullItemList, "this is fullItemList")
+  console.log(fullItemList, "this is fullItemList")
 
   return (
     <BrowserRouter>
