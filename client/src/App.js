@@ -47,7 +47,8 @@ function App() {
 }
 
 //To Do:
-//navigation bar: Home (component), Inventory (component), About (component)?
+//About (component)?
 //log in needed?
+//Ability to add to cart?
 
 export default App;

@@ -10,7 +10,7 @@ const Inventory = ({ fullItemList }) => {
 };
 
 //search bar
-//card previews, need SEEDED data to work with
+//card previews, now need details
 //Inventory Tab that is all cards. Name, price, click to see details
 
 export default Inventory;
