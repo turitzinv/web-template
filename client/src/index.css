@@ -67,3 +67,16 @@ body {
 #inventory-title {
   text-align: center;
 }
+
+#item-card {
+  width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+#item-image {
+  width: 450px;
+  height: 500px;
+  text-align: center;
+  padding: 25px;
+}

@@ -27,7 +27,7 @@ function App() {
     ))
   ) : null;
 
-  console.log(fullItemList, "this is fullItemList")
+  console.log(items.image_url, "this is image_url")
 
   return (
     <BrowserRouter>
@@ -38,7 +38,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/inventory">
-            {/* <Inventory fullItemList={fullItemList} /> */}
+            <Inventory fullItemList={fullItemList} />
           </Route>
         </Switch>
       </div>
