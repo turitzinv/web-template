@@ -50,5 +50,7 @@ function App() {
 //About (component)?
 //log in needed?
 //Ability to add to cart?
+//preview and then main item?
+//Fix deployed version repeating
 
 export default App;
